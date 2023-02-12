@@ -12,8 +12,13 @@ public class Main {
          * but didnt understand .valueOf() method and how it return 720
          * and why inside.valueOf() is one
          */
-        if (number==0)
+        if (number==0){
             return BigInteger.valueOf(1);
+        }
+        else if (number < 0) {
+            throw new ArithmeticException();
+        }
+
         return BigInteger.valueOf(number).multiply(factorialNumberRecursion(number-1));
     }
     private static int factorialNumberWithLoop(int number){
