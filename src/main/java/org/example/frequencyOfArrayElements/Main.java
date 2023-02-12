@@ -7,8 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         String[] arr = {"Apple", "Banana", "apple", "Cherry", "Apple"};
-        System.out.println(frequencyOfArrayElementsSolutionWithLoop(arr));
-        System.out.println(frequencyOfArrayElementsSolutionWithStream(arr));
+
 
     }
     private static Map<String,Long> frequencyOfArrayElementsSolutionWithStream(String[] arr){
