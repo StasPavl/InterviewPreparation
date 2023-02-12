@@ -28,7 +28,7 @@ public class Main {
                 }
             }
         }catch(NullPointerException e){
-            return ' ';
+            return ' '; // On interview, we can ask question about null input
         }
 
         return map.entrySet().stream()
