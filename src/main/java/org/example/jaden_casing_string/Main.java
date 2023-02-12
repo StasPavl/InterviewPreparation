@@ -9,7 +9,6 @@ public class Main {
 
     }
 
-
     public static String solution2 (String str){
         String res = "";
         for (int i = 0; i < str.length(); i++) {
