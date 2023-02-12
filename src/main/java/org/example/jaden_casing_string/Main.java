@@ -3,11 +3,26 @@ package org.example.jaden_casing_string;
 public class Main {
     public static void main(String[] args) {
         String str = "How can mirrors be real if our eyes aren't real";
-        System.out.println(jadenMethod(str));
+        //System.out.println(jadenMethod(str));
 
+        System.out.println(solution2(str));
 
     }
 
+
+    public static String solution2 (String str){
+        String res = "";
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ' '){
+                res += ""+str.charAt(i) + Character.toUpperCase(str.charAt(i+1));
+                i++;
+
+            }else{
+                res += ""+str.charAt(i);
+            }
+        }
+        return res;
+    }
     private static String jadenMethod(String str) {
         String res = "";
 

@@ -7,10 +7,10 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        String str = "aaabccedddd";
+        String str = "aA111b";
 
         System.out.println(countDuplicate2(str));
-        System.out.println(countDuplicate(str));
+       // System.out.println(countDuplicate(str));
 
 
     }
@@ -43,11 +43,11 @@ public class Main {
 
     private static Integer countDuplicate(String str){
 
-        String collection = "";
+        String collection = "";//AB
 
         str = str.toLowerCase();
 
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) { //ABBA
             int count = 0;
             for (int j = 0; j < str.length(); j++) {
                 if (str.charAt(i) == str.charAt(j)){
