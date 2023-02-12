@@ -7,8 +7,9 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        String str = "success";
-        System.out.println(findUniqueCharSolutionWithMap(str));
+        String str = "sss";
+
+
 
 
     }
@@ -24,12 +25,11 @@ public class Main {
                 map.put(str.charAt(i),1);
             }
         }
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1){
-                return entry.getKey();
-            }
-        }
-        return ' ';
+        return map.entrySet().stream()
+                .filter(entry -> entry.getValue() == 1)
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse(' ');
     }
     private static char findUniqueCharSolutionWithLoop(String str){
         /**

@@ -16,7 +16,6 @@ public class Main {
             return BigInteger.valueOf(1);
         return BigInteger.valueOf(number).multiply(factorialNumberRecursion(number-1));
     }
-
     private static int factorialNumberWithLoop(int number){
         int result = 1;
         for (int i = number; i >= 1; i--){
