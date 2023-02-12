@@ -12,7 +12,6 @@ public class Main {
         System.out.println(countDuplicate2(str));
        // System.out.println(countDuplicate(str));
 
-
     }
     private static Integer countDuplicate2(String str){
 
