@@ -7,9 +7,9 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
-        String str = "sss";
-
-
+        String str = null;
+        char uniqueCharSolutionWithMap = findUniqueCharSolutionWithMap(str);
+        System.out.println(uniqueCharSolutionWithMap);
 
 
     }
@@ -18,13 +18,19 @@ public class Main {
          * time complexity is O(n)
          */
         Map<Character,Integer> map = new HashMap<>();
-        for (int i = 0; i < str.length(); i++) {
-            if (map.containsKey(str.charAt(i))){
-                map.replace(str.charAt(i), map.get(str.charAt(i))+1);
-            }else{
-                map.put(str.charAt(i),1);
+        try{
+
+            for (int i = 0; i < str.length(); i++) {
+                if (map.containsKey(str.charAt(i))){
+                    map.replace(str.charAt(i), map.get(str.charAt(i))+1);
+                }else{
+                    map.put(str.charAt(i),1);
+                }
             }
+        }catch(NullPointerException e){
+            return ' ';
         }
+
         return map.entrySet().stream()
                 .filter(entry -> entry.getValue() == 1)
                 .map(Map.Entry::getKey)
