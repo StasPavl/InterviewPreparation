@@ -1,10 +1,13 @@
 package org.example.findFacrotial;
 
 import java.math.BigInteger;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println(factorialNumberRecursion(6));
+
     }
     private static BigInteger factorialNumberRecursion(int number){
         /**
@@ -27,6 +30,19 @@ public class Main {
             result*=i;
         }
         return result;
+    }
+    public static int factorialNumberWithStream(int number){
+        return Stream.iterate(1,i -> i < number, i -> i + 1) //with Java 9
+                .reduce(1, (x,y) -> x*y);
+    }
+    public static int factorialNumberWithStream2(int number){
+        return Stream.iterate(1, i -> i + 1)
+                .limit(number)
+                .reduce(1, (x,y) -> x * y);
+    }
+    public static int factorialNumberWithStream3(int number){
+        return IntStream.range(1, number)
+                .reduce(1,(x,y) -> x*y);
     }
 }
 /*

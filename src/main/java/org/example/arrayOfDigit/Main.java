@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int number = 490;
+        System.out.println(Arrays.toString(arrayOfDigitSolutionWithStream(number)));
 
 
     }
@@ -28,7 +29,7 @@ public class Main {
     private static int[] arrayOfDigitSolutionWithWhileLoop(int number){
         int[] intArr = new int[Integer.toString(number).length()];
 
-        int index = Integer.toString(number).length()-1;
+        int index = Integer.toString(number).length()-1;//3
         while(number > 0){
             intArr[index] = number % 10;
             number /= 10;

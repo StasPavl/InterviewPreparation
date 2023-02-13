@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         String[] arr = {"Apple", "Banana", "apple", "Cherry", "Apple"};
+        System.out.println(frequencyOfArrayElementsSolutionWithStream(arr));
 
 
     }
@@ -16,6 +17,7 @@ public class Main {
     }
     private static Map<String,Integer> frequencyOfArrayElementsSolutionWithLoop(String[] arr){
         Map<String,Integer> map = new HashMap<>();
+
         for (String each : arr) {
             if (map.containsKey(each)){
                 map.replace(each, map.get(each)+1);
@@ -27,6 +29,7 @@ public class Main {
     }
     private static Map<String,Integer> frequencyOfArrayElementsSolutionWithCollection(String[] arr){
         Map<String,Integer> map = new HashMap<>();
+
         for (String each : arr) {
             map.put(each,Collections.frequency(List.of(arr),each));
         }
