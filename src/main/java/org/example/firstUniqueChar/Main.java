@@ -2,6 +2,7 @@ package org.example.firstUniqueChar;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Main {
@@ -17,7 +18,7 @@ public class Main {
         /**
          * time complexity is O(n)
          */
-        Map<Character,Integer> map = new HashMap<>();
+        Map<Character,Integer> map = new LinkedHashMap<>();
         try{
 
             for (int i = 0; i < str.length(); i++) {
