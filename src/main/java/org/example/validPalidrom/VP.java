@@ -8,7 +8,7 @@ public class VP {
 
     }
     private static boolean isPalidrome(String str){
-        str = str.toLowerCase().replaceAll("[^a-z]","");
+        str = str.toLowerCase().replaceAll("[^a-z0-9]","");
         int n =str.length();
         int i =0, j = n-1;
 
