@@ -15,7 +15,7 @@ public class main {
 
     public static int[] twoSumTwoPointer(int[] nums,int target){
          // -3,3,4,90
-        Arrays.sort(nums);
+        Arrays.sort(nums); // n log n
 
         int[] result = new int[2];
 
@@ -32,9 +32,10 @@ public class main {
                 left++;
             }
         }
+// map to index of elements
         Map<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            map.put(i,nums[i]);
+            map.put(nums[i], i);
         }
         result[0] = map.get(left);
         result[1] = map.get(right);
@@ -42,16 +43,17 @@ public class main {
     }
     public static int[] twoSum(int[]nums, int target){
         int[] result = new int[2];
-        Arrays.sort(nums);
+
         for (int i = 0; i < nums.length; i++) {
             for (int j = 1; j < nums.length; j++) {
-                if (nums[i] + nums[j]== target){
+                if (nums[i] + nums[j] == target){
                     result[0] = nums[i];
                     result[1] = nums[j];
+                    return result;
                 }
             }
 
         }
-        return result;
+        return new int[0];
     }
 }

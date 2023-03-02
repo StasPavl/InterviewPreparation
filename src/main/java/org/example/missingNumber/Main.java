@@ -36,8 +36,8 @@ public class Main {
 
         for (int i = 0; i < nums.length; i++) {//O(n)
             sumNum += nums[i];// 3+0+1 = 4 // 0+1
-            rangeSum += i; // 0+1+2 = 3// 0+1
-        }//        3     +    3        -     4  = 2
+            rangeSum += i; // 0+1+2 = 3 // 0+1
+        }//        1     +    2        -     1  = 2
         return (rangeSum + nums.length) - sumNum;
 
     }
