@@ -9,20 +9,20 @@ public class main {
 
     public int removeDuplicates(int[] nums) {
 
-        if (nums.length == 0) {
-            return 0;
-        }
-        int lastUniqueIndex = 0;
+        int i = 0;
 
-        for (int i = 1; i < nums.length; i++) {
 
-            if (nums[i] != nums[lastUniqueIndex]) {
+        for (int j = 1; j < nums.length; j++) {
 
-                lastUniqueIndex++;
-                nums[lastUniqueIndex] = nums[i];
+            if (nums[j] != nums[i]) {
+                nums[++i] = nums[j];
             }
         }
-        return lastUniqueIndex + 1;
+
+
+        int[] uniqueNums = Arrays.copyOf(nums, i + 1);
+
+        return uniqueNums.length;
     }
 
 }
