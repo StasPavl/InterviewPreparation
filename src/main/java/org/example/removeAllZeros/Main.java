@@ -11,12 +11,12 @@ public class Main {
     public static void twoPointerMoveZero(int[] nums){
         //0,1,0,3,12 => 1,0,0,3,12 => 1,3,0,0,12
         //^ ^        =>   ^   ^    =>     ^   ^
-        int length = nums.length;
+        int length = nums.length; //O(1)
         if (length < 2 ) return;
 
         int left = 0, right = 1;
 
-        while(right < length){
+        while(right < length){ //O(n)
             if (nums[left] != 0){
                 left++;
                 right++;
@@ -31,12 +31,12 @@ public class Main {
 
     }
     public static void moveZero(int[] nums){
-        int index = 0; //3
+        int index = 0; //3 O(1)
 
         int length = nums.length;
         if (length < 2) return;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {//O(n)
             if (nums[i] != 0){
                 nums[index] = nums[i];
                 index++;
