@@ -6,21 +6,20 @@ public class TheAnimalWentTwoByTwo {
     public static void main(String[] args) {
         List<String> list0 = new ArrayList<>();
         List<String> list1 = new ArrayList<>(Arrays.asList("goat"));
-        List<String> list2 = Arrays.asList("dog", "goat", "dog");
+        List<String> list2 = Arrays.asList("dog", "goat", "cat");
         List<String> list3 = Arrays.asList("dog", "cat", "dog", "cat", "beaver", "cat");
         List<String> list4 = Arrays.asList("goat", "goat", "rabbit", "rabbit", "rabbit", "duck", "horse", "horse", "swan");
 
-       /* System.out.println(twoByTwo(list0));
+        System.out.println(twoByTwo(list0));
         System.out.println(twoByTwo(list1));
         System.out.println(twoByTwo(list2));
         System.out.println(twoByTwo(list3));
-        System.out.println(twoByTwo(list4));*/
-
-        System.out.println(twoPairs(list0));
+        System.out.println(twoByTwo(list4));
+      /*  System.out.println(twoPairs(list0));
         System.out.println(twoPairs(list1));
         System.out.println(twoPairs(list2));
         System.out.println(twoPairs(list3));
-        System.out.println(twoPairs(list4));
+        System.out.println(twoPairs(list4));*/
     }
     public static Map<String,Integer> twoPairs(List<String> list){
         Map<String,Integer> map = new HashMap<>();
