@@ -2,7 +2,7 @@ package org.example.lengthOfLastWord;
 
 public class LengthOfLastWord {
     public static void main(String[] args) {
-        String s = "Hello World";
+        String s = "Hello World   ";
         String s1 = "   fly me   to   the moon  ";
         String s2 = "luffy is still joyboy";
 
@@ -12,7 +12,7 @@ public class LengthOfLastWord {
 
     }
     public static int lengthOfLastWord(String str){
-        str = str.trim();
+
         String[] arr = str.split(" ");
 
         return arr[arr.length-1].length();
