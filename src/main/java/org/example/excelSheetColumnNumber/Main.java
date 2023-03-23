@@ -2,7 +2,7 @@ package org.example.excelSheetColumnNumber;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(titleToNumber("ZY"));
+        System.out.println(titleToNumber("BCD"));
 
     }
     public static int titleToNumber(String columnTitle){
