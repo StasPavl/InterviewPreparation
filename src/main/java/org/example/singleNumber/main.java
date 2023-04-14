@@ -18,8 +18,9 @@ public class main {
         System.out.println(singleNumber2(nums1));
         System.out.println(singleNumber3(nums1));
         System.out.println(singleNumber4(nums1));
+
     }
-    public static int singleNumber4(int[] nums){
+    public static int singleNumber4(int[] nums){//time O(n) space O(n)
         Set<Integer> uniq = new HashSet<>();
         Set<Integer> dup = new HashSet<>();
 
@@ -41,7 +42,7 @@ public class main {
     public static int singleNumber3(int[]nums){//time O(n) space O(1)
         int result = 0;
         for (int num : nums) {
-            result = result ^ num;
+            result = result ^ num; //4,1,2,1,2
         }
         return result;
 /*
