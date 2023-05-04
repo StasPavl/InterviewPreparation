@@ -31,7 +31,7 @@ public class main {
             stack.push(nums[i]);
 
         }
-        return  new ArrayList<Integer>(stack);
+        return  new ArrayList<>(stack);
     }
 
     @Test
