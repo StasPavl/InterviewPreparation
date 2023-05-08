@@ -7,11 +7,11 @@ public class CheckDirectory {
         String currentDir = System.getProperty("user.dir");
         System.out.println("Current directory: " + currentDir);
 
-        File inputFile = new File("/Users/stanislavpavlovskyi/IdeaProjects/InterviewPreperation/src/main/java/org/example/alterCase/input.txt");
+        File inputFile = new File("/Users/stanislavpavlovskyi/IdeaProjects/InterviewPreperation/src/main/java/org/example/alterCase/inpu1t.txt");
         if (inputFile.exists()) {
-            System.out.println("Found input.txt file in current directory.");
+            System.out.println("Found inpu1t.txt file in current directory.");
         } else {
-            System.out.println("Could not find input.txt file in current directory.");
+            System.out.println("Could not find inpu1t.txt file in current directory.");
         }
     }
 }
