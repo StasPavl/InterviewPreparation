@@ -39,7 +39,7 @@ Constraints: Input file will have at least one line with valid coordinates.
         /**
          * this option if we have single x,y in out input.txt file
          */
-       /* int x1 = 0;
+     /*   int x1 = 0;
         int y1 = 0;
         int x2 = 0;
         int y2 = 0;
@@ -62,12 +62,13 @@ Constraints: Input file will have at least one line with valid coordinates.
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }*/
+        }
+        System.out.println(countDistance(x1,y1,x2,y2));*/
 
         /**
          * This option if we have multiple x and y in our input.txt file
          */
-       /* List<Double> listOfDistances = new ArrayList<>();
+        List<Double> listOfDistances = new ArrayList<>();
         try {
             File file = new File("/Users/stanislavpavlovskyi/IdeaProjects/InterviewPreperation/src/main/java/org/example/calculateDistance/input.txt");
             Scanner scanner = new Scanner(file);
@@ -90,7 +91,7 @@ Constraints: Input file will have at least one line with valid coordinates.
         }
         for (Double distance : listOfDistances) {
             System.out.println(distance);
-        }*/
+        }
     }
 
     /**
